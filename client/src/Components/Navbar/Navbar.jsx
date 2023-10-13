@@ -5,6 +5,8 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 
 const Navbar = () => {
+  const loginPageUrl = "https://msuud.github.io/sgp/login.html";
+
   //Code to toggle/show navbar
   const [active, setActive] = useState("navBar");
   const showNav = () => {
@@ -48,7 +50,7 @@ const Navbar = () => {
 
             <li className="navItem">
               <a href="#" className="navLink">
-                Packages
+                Package
               </a>
             </li>
 
@@ -60,7 +62,13 @@ const Navbar = () => {
 
             <div className="headerBtns flex">
               <button className="btn loginBtn">
-                <a href="#">Login</a>
+                <a
+                  href={loginPageUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Login
+                </a>
               </button>
               <button className="btn loginBtn">
                 <a href="#">Sign Up</a>
