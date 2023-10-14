@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const mongoUrl =
-  "mongodb+srv://urvadave2:JyLiwPGxxAs6CUL2@mongodb-demo.4ecdwb9.mongodb.net/SGP-rooms";
+  "mongodb+srv://username:password@mongodb-demo.4ecdwb9.mongodb.net/SGP-rooms";
 
 mongoose.connect(mongoUrl, { useUnifiedTopology: true, useNewUrlParser: true });
 var connection = mongoose.connection;
