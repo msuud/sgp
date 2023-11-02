@@ -19,12 +19,12 @@ const Home = () => {
         <div className="homeCard grid">
           <div className="CheckinDiv">
             <label htmlFor="checkin">Check In Date</label>
-            <input type="text" placeholder="Check in Date" />
+            <input type="date" placeholder="Check in Date" />
           </div>
 
           <div className="CheckOutDiv">
             <label htmlFor="checkout">Check Out Date</label>
-            <input type="text" placeholder="Check out Date" />
+            <input type="date" placeholder="Check out Date" />
           </div>
 
           <div className="personDiv">

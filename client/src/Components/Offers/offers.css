@@ -9,86 +9,13 @@
   --inputColor: hsl(330, 12%, 97%);
 }
 
-.homeCard {
-  width: 80%;
-  border-radius: 1rem;
-  padding: 2rem;
-  background: var(--whiteColor);
-  position: absolute;
-  gap: 1rem;
-  justify-content: center;
-  bottom: -35%;
-  transform: translate(-50%);
-  left: 50%;
-  box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+.offer .secContainer .secIntro {
+  max-width: 70%;
+  text-align: center;
+  margin: 0auto 2rem;
 }
-.homeCard .CheckinDiv,
-.homeCard .CheckOutDiv,
-.homeCard .personDiv {
-  width: 100%;
-}
-.homeCard .CheckinDiv label,
-.homeCard .CheckOutDiv label,
-.homeCard .personDiv label {
-  display: block;
-  color: var(--textColor);
-  font-weight: 500;
-  padding-bottom: 0.4rem;
-  font-size: 13px;
-}
-.homeCard .CheckinDiv input,
-.homeCard .CheckOutDiv input,
-.homeCard .personDiv input {
-  width: 100%;
-  background: var(--inputColor);
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
-  font-size: 13px;
-  font-weight: 500;
-}
-.homeCard .CheckinDiv input::-moz-placeholder, .homeCard .CheckOutDiv input::-moz-placeholder, .homeCard .personDiv input::-moz-placeholder {
-  font-size: 13px;
-  opacity: 0.5;
-  font-weight: 400;
-}
-.homeCard .CheckinDiv input::placeholder,
-.homeCard .CheckOutDiv input::placeholder,
-.homeCard .personDiv input::placeholder {
-  font-size: 13px;
-  opacity: 0.5;
-  font-weight: 400;
-}
-.homeCard .CheckinDiv input:focus,
-.homeCard .CheckOutDiv input:focus,
-.homeCard .personDiv input:focus {
-  outline: none;
-}
-.homeCard .btn {
-  width: 100%;
-  padding: 0.6rem 1.5rem;
-  color: var(--whiteColor);
-  font-weight: 600;
-}
-
-@media screen and (min-width: 480px) {
-  .homeCard {
-    bottom: -100px;
-    width: 90%;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .homeCard .btn {
-    transform: translateY(15px);
-  }
-}
-@media screen and (min-width: 720px) {
-  .homeCard {
-    bottom: -10%;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (min-width: 1024px) {
-  .homeCard {
-    width: 70%;
-  }
+.offer .secContainer .secIntro .secTitle {
+  color: var(--blackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
 }/*# sourceMappingURL=offers.css.map */

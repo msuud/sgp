@@ -5,7 +5,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 
 const Navbar = () => {
-  const loginPageUrl = "https://msuud.github.io/sgp/login.html";
+  const loginPageUrl = "https://msuud.github.io/login-page-host/";
 
   //Code to toggle/show navbar
   const [active, setActive] = useState("navBar");

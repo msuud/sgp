@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Package Output</title>
+    <link rel="stylesheet" type="text/css" href="./pack.css" />
+  </head>
+  <body>
+    <h1>Package Output</h1>
+    <div id="output"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+      function RecommendationForm({ setBudget }) {
+        const [userBudget, setUserBudget] = React.useState("");
+
+        const handleRecommendation = () => {
+          const parsedBudget = parseFloat(userBudget);
+          if (!isNaN(parsedBudget)) {
+            setBudget(parsedBudget);
+          }
+        };
+
+        return (
+          <div className="budget-form">
+            <label htmlFor="budget">Enter Your Budget (Rs):</label>
+            <input
+              type="number"
+              id="budget"
+              placeholder="3000-6000"
+              value={userBudget}
+              onChange={(e) => setUserBudget(e.target.value)}
+            />
+            <button onClick={handleRecommendation}>Recommend</button>
+          </div>
+        );
+      }
+
+      function RecommendationResult({ budget }) {
+        let amenities = "";
+
+        if (budget < 3000) {
+          amenities = "Amenities: Dine-In Services";
+        } else if (budget >= 3000 && budget <= 6000) {
+          amenities =
+            "Amenities: Dine-In Services, Gym Access, Pool Access, Fishing (Half-Day), Bird Watching, Beach Bonfire, Stargazing";
+        } else {
+          amenities =
+            "Amenities: Spa and Massages, Exclusive Dining Experience, Outdoor Movie Night, Stargazing, Tennis";
+        }
+
+        const element = (
+          <div id="recommendation" className="recommendation">
+            <h2>Your Recommended Package:</h2>
+            <p id="amenities">{amenities}</p>
+          </div>
+        );
+
+        ReactDOM.render(element, document.getElementById("output"));
+      }
+    </script>
+
+    <script>
+      const { useState } = React;
+
+      function Packages() {
+        const [budget, setBudget] = useState(null);
+
+        return (
+          <section className="pack">
+            <div className="secContainer container">
+              <div className="packText">
+                <h1>Resort Recommendation</h1>
+              </div>
+
+              <div className="packCard grid">
+                <div className="form">
+                  <RecommendationForm setBudget={setBudget} />
+                </div>
+                <div className="result">
+                  {budget && <RecommendationResult budget={budget} />}
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      const element = <Packages />;
+
+      ReactDOM.render(element, document.getElementById("output"));
+    </script>
+  </body>
+</html>
