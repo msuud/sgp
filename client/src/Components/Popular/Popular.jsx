@@ -1,6 +1,5 @@
 import React from "react";
 import "./popular.css";
-import { BsArrowLeftShort } from "react-icons/bs";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
 
@@ -33,11 +32,6 @@ const Popular = () => {
         <div className="secHeader flex">
           <div className="textDiv">
             <h2 className="secTitle">Rooms & Suites</h2>
-          </div>
-
-          <div className="iconsDiv flex">
-            <BsArrowLeftShort className="icon leftIcon" />
-            <BsArrowRightShort className="icon" />
           </div>
         </div>
 

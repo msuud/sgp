@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 
 const Home = () => {
+  const aboutUrl = "https://msuud.github.io/about-host/About/about.html";
   return (
     <section className="home">
       <div className="secContainer container">
@@ -12,7 +13,9 @@ const Home = () => {
           </p>
 
           <button className="btn">
-            <a href="#">Explore Now</a>
+            <a href={aboutUrl} target="_blank">
+              Explore Now
+            </a>
           </button>
         </div>
 
